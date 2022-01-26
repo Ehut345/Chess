@@ -153,18 +153,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chessmanPrefabs:
-  - {fileID: 7695597605853053214, guid: 3b4b757a34bc1f1469f0f2f7ad4346f8, type: 3}
-  - {fileID: 2834391199645663280, guid: 5c450c0c7082520458dd2ac9a00e9d09, type: 3}
-  - {fileID: 7036570001264891545, guid: 8ee9b2dcf78702241b1ea5683a9c74ce, type: 3}
-  - {fileID: 4155687582522011746, guid: 90577399cea66db41a99bab8e3a6aefc, type: 3}
-  - {fileID: 2851678748724554531, guid: aefc050dd6c5eec43b38954dfa888938, type: 3}
-  - {fileID: 4620663637827273328, guid: f08bd6e68a3cb5a40b63aabd52515cfa, type: 3}
-  - {fileID: 1739133300712173763, guid: 91d0d7bdb5599114e868766d79960805, type: 3}
-  - {fileID: 1400500253420104042, guid: 13c892e183fc20e4496319eddf8eb87f, type: 3}
-  - {fileID: 221405174537973467, guid: 8d26ddf0c18b9df45b3c7080868fa419, type: 3}
-  - {fileID: 4625924145663059186, guid: 545e51a821f212d49af3737927299dac, type: 3}
-  - {fileID: 4427701255748569443, guid: 50d6bda27621ab545943bdfd5f82a141, type: 3}
-  - {fileID: 3198183650266763691, guid: 54e6b26e263fb564ea39fa6d0a1402dd, type: 3}
+  - {fileID: 1392702132261094297, guid: e9c9345dce57eb14590c201e3ae89798, type: 3}
+  - {fileID: 4106090525168629699, guid: 2f3f70887ea51f748afcbf4167ca6c21, type: 3}
+  - {fileID: 1610404093910260330, guid: 46903ee79f16d944ba9837e6e5d14852, type: 3}
+  - {fileID: 6603020252775687985, guid: 0ce6f55b44896a74a8e1e8e688bcaef8, type: 3}
+  - {fileID: 3506845228306706212, guid: 3b96950557ffe0948b3bf04fdfa59cb7, type: 3}
+  - {fileID: 2088318428038975158, guid: 06bd460abcbb01848a67020372d1ba05, type: 3}
+  - {fileID: 9024555433269438042, guid: 367a2add826686b4cbf2ae3bbce35776, type: 3}
+  - {fileID: 5082070277272811903, guid: 52fdf201708e11c44b1750ffcb4e1753, type: 3}
+  - {fileID: 6804259112521006931, guid: d305fd6e8e4faa440849f6941ff0d902, type: 3}
+  - {fileID: 1898354343503036740, guid: 2d3288571d93fa148b8d73cbb49a50b9, type: 3}
+  - {fileID: 4201924150623528431, guid: da153ecad92202440a389d40f96fe81f, type: 3}
+  - {fileID: 9071243551560910659, guid: 6f2e490e5dc840141bed84510f2abec9, type: 3}
+  isWhiteTurn: 1
 --- !u!4 &487242655
 Transform:
   m_ObjectHideFlags: 0
@@ -349,8 +350,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.70605546, y: 0.0010520037, z: -0.0010487381, w: 0.70815504}
-  m_LocalPosition: {x: 4.251217, y: 8.501182, z: 4.356291}
+  m_LocalRotation: {x: -0.25594363, y: 0.5064408, z: -0.16049702, w: -0.8076208}
+  m_LocalPosition: {x: 10.518165, y: 5.9291005, z: -0.08480245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

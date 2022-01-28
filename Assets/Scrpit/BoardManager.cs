@@ -59,7 +59,14 @@ public class BoardManager : MonoBehaviour
             return;
         }
 
+        bool hasAtleastOneMove = false;
         allowedMoves = Chessmans[x, y].PossibleMove();
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++)
+                if (allowedMoves[i, j])
+                    hasAtleastOneMove = true;
+        if (!hasAtleastOneMove)
+            return;
         selectedChessman = Chessmans[x, y];
         BoardHighlights.Instance.HighlightAllowedMoves(allowedMoves);
     }
@@ -74,9 +81,9 @@ public class BoardManager : MonoBehaviour
                 //capture a piece
 
                 //if king end
-                if(c.GetType()==typeof(King))
+                if (c.GetType() == typeof(King))
                 {
-                    //end the game
+                    Endgame();
                     return;
                 }
                 activeChessman.Remove(c.gameObject);
@@ -188,5 +195,17 @@ public class BoardManager : MonoBehaviour
         //pawns
         for (int i = 0; i < 8; i++)
             SpawnChessman(11, i, 6);
+    }
+    private void Endgame()
+    {
+        if (isWhiteTurn)
+            Debug.Log("White wins");
+        else
+            Debug.Log("Black wins");
+        foreach (GameObject go in activeChessman)
+            Destroy(go);
+        isWhiteTurn = true;
+        BoardHighlights.Instance.HideHighlithes();
+        SpawnAllChessmans();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class BoardManager : MonoBehaviour
 {
@@ -26,10 +27,14 @@ public class BoardManager : MonoBehaviour
     private Material previousMat;
     public Material selectedMat;
 
+    public CinemachineVirtualCamera cam1, cam2;
+
     public int[] EnPassantMove { set; get; }
 
     private void Start()
     {
+        cam1.enabled = true;
+        cam2.enabled = false;
         Instance = this;
         SpawnAllChessmans();
     }
@@ -82,6 +87,16 @@ public class BoardManager : MonoBehaviour
     {
         if (allowedMoves[x, y])
         {
+            if (isWhiteTurn)
+            {
+                cam1.enabled = false;
+                cam2.enabled = true;
+            }
+            else
+            {
+                cam1.enabled = true;
+                cam2.enabled = false;
+            }
             Chessman c = Chessmans[x, y];
 
             if (c != null && c.isWhite != isWhiteTurn)

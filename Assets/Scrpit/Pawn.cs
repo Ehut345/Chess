@@ -8,6 +8,7 @@ public class Pawn : Chessman
     {
         bool[,] r = new bool[8, 8];
         Chessman c, c2;
+        int[] e = BoardManager.Instance.EnPassantMove;
 
         //white
         if (isWhite)
@@ -15,6 +16,10 @@ public class Pawn : Chessman
             //diagnol left
             if (CurrentX != 0 && CurrentY != 7)
             {
+                if (e[0] == CurrentX - 1 && e[1] == CurrentY + 1)
+                { 
+                    r[CurrentX - 1, CurrentY + 1] = true;
+                }
                 c = BoardManager.Instance.Chessmans[CurrentX - 1, CurrentY + 1];
                 if (c != null && !c.isWhite)
                 {
@@ -24,6 +29,11 @@ public class Pawn : Chessman
             //diagnol right
             if (CurrentX != 7 && CurrentY != 7)
             {
+                
+                if (e[0] == CurrentX + 1 && e[1] == CurrentY + 1)
+                {
+                    r[CurrentX + 1, CurrentY + 1] = true;
+                }
                 c = BoardManager.Instance.Chessmans[CurrentX + 1, CurrentY + 1];
                 if (c != null && !c.isWhite)
                 {
@@ -57,6 +67,10 @@ public class Pawn : Chessman
             //diagnol left
             if (CurrentX != 0 && CurrentY != 0)
             {
+                if (e[0] == CurrentX - 1 && e[1] == CurrentY - 1)
+                {
+                    r[CurrentX - 1, CurrentY - 1] = true;
+                }
                 c = BoardManager.Instance.Chessmans[CurrentX - 1, CurrentY - 1];
                 if (c != null && c.isWhite)
                 {
@@ -66,6 +80,10 @@ public class Pawn : Chessman
             //diagnol right
             if (CurrentX != 7 && CurrentY != 0)
             {
+                if (e[0] == CurrentX + 1 && e[1] == CurrentY - 1)
+                {
+                    r[CurrentX + 1, CurrentY - 1] = true;
+                }
                 c = BoardManager.Instance.Chessmans[CurrentX + 1, CurrentY - 1];
                 if (c != null && c.isWhite)
                 {
